@@ -1,0 +1,28 @@
+[package]
+name = "VladanGojgic_kvbaza"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata]
+
+[package.metadata.default-run]
+name = "kv_mem"
+
+[dependencies]
+bincode = "1"
+byteorder = "1"
+crc = "1"
+serde = "1"
+serde_derive = "1"
+
+[lib]
+name = "libkvbaza"
+path = "src/lib.rs"
+
+[[bin]]
+name = "kv_mem"
+path = "src/kv_mem.rs"
+
+[[bin]]
+name = "kv_disk"
+path = "src/kv_disk.rs"
